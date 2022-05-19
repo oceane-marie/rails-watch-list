@@ -1,0 +1,18 @@
+<div id="banner">
+  <div id="banner-text">
+    <h1>My list of movies</h1>
+    <h2>Save your favorites movies</h2>
+  </div>
+</div>
+
+
+<div class="container">
+<% @lists.each do |list| %>
+  <div class="card-list">
+    <%= link_to list.name, list_path(list) %>
+  </div>
+  <% end %>
+  <div class="card-add-list">
+    <%= link_to "add a list", new_list_path %>
+  </div>
+</div>

@@ -1,0 +1,63 @@
+// Specific CSS for your home-page
+.body{
+  display: flex;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  color: gray;
+  position: relative;
+}
+
+h1, h2{
+  font-family: 'Limelight', cursive;
+  text-shadow: 5px 5px 10px gray;
+}
+
+h1{
+  font-size: 48px;
+}
+
+h2{
+  font-size: 32px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  &:hover{
+    text-decoration: none;
+    color: black;
+  }
+}
+
+#banner{
+  background-image: url("https://images.pexels.com/photos/9469164/pexels-photo-9469164.jpeg");
+  background-position:  0px 0px;
+  background-size: cover;
+  position: fixed;
+  height: 100vh;
+  width: 40vw;
+  color: white;
+  #banner-text{
+    padding-top: 100px;
+    padding-left: 30px;
+  }
+}
+
+.container {
+  position: absolute;
+  right: 100px;
+  top: 150px;
+    .card-list{
+      margin-bottom: 30px;
+      width: 60%;
+      border-bottom: solid 2px gray;
+      float: right;
+      font-size: 24px;
+  }
+}
+
+.card-add-list{
+  position: absolute;
+  right: 30px;
+  bottom: 200px;
+}
