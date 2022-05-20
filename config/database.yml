@@ -92,8 +92,8 @@ default: &default
 
 development:
   <<: *default
-  database: rails-watch-list_development
+  database: rails-watch-list_development-2
 
 test:
   <<: *default
-  database: rails-watch-list_test
+  database: rails-watch-list_test-2

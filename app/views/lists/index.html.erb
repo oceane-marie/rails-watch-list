@@ -12,6 +12,7 @@
       <div class="container">
       <% @lists.each do |list| %>
         <div class="card-list">
+        <%= cl_image_tag @list.photo.key, height: 150, width: 200, crop: :fill %>
         <%= link_to list.name, list_path(list) %>
         </div>
       <% end %>
