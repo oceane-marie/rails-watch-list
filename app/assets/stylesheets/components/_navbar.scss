@@ -13,6 +13,9 @@
 
 .navbar{
   background-color: #DFD8CA;
+  box-shadow: 5px 5px 10px gray;
+  margin-bottom: 30px;
+  margin-top: 0px;
 }
 
 #nav-left{
@@ -24,8 +27,8 @@
     margin-top: 20px;
     margin-left: 30px;
   }
-  p{
-    padding-top: 30px;
+  a{
+    padding-top: 25px;
     padding-bottom: 0px;
     padding-left: 20px ;
   }

@@ -1,0 +1,23 @@
+.container-movie{
+  width: 200px;
+}
+
+.card-movie{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  p{
+    width: 200px;
+  }
+}
+
+.card-bookmark{
+  display: flex;
+  width: 200px;
+  justify-content: space-between;
+}
+
+.size-30{
+  height: 30px;
+  width: 30px;
+}

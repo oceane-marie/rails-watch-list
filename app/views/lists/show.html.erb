@@ -1,17 +1,34 @@
-<h1><%= @list.name %></h1>
+<div class="navbar">
+  <div id="nav-left">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M463.1 32h-416C21.49 32-.0001 53.49-.0001 80v352c0 26.51 21.49 48 47.1 48h416c26.51 0 48-21.49 48-48v-352C511.1 53.49 490.5 32 463.1 32zM111.1 408c0 4.418-3.582 8-8 8H55.1c-4.418 0-8-3.582-8-8v-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8L111.1 408zM111.1 280c0 4.418-3.582 8-8 8H55.1c-4.418 0-8-3.582-8-8v-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8V280zM111.1 152c0 4.418-3.582 8-8 8H55.1c-4.418 0-8-3.582-8-8v-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8L111.1 152zM351.1 400c0 8.836-7.164 16-16 16H175.1c-8.836 0-16-7.164-16-16v-96c0-8.838 7.164-16 16-16h160c8.836 0 16 7.162 16 16V400zM351.1 208c0 8.836-7.164 16-16 16H175.1c-8.836 0-16-7.164-16-16v-96c0-8.838 7.164-16 16-16h160c8.836 0 16 7.162 16 16V208zM463.1 408c0 4.418-3.582 8-8 8h-47.1c-4.418 0-7.1-3.582-7.1-8l0-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8V408zM463.1 280c0 4.418-3.582 8-8 8h-47.1c-4.418 0-8-3.582-8-8v-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8V280zM463.1 152c0 4.418-3.582 8-8 8h-47.1c-4.418 0-8-3.582-8-8l0-48c0-4.418 3.582-8 7.1-8h47.1c4.418 0 8 3.582 8 8V152z"/></svg>
+    <%= link_to "Lists", root_path %>
+  </div>
+  <div class="container">
+    <h2 class="pb-30 pt-15"><%= @list.name %></h2>
+  </div>
+</div>
 
-<%= link_to "Add a movie", new_list_bookmark_path(@list) %>
-<%= link_to "return", root_path %>
+ <div class="container-btn mb-30 fr mr-30">
+  <%= link_to new_list_bookmark_path(@list) do %>
+    <div class="btn">Add a movie</div>
+  <% end %>
+  </div>
 
-
-
-<div class="card-movie">
-<% @list.movies.each do |movie|  %>
-  <%= movie.title %>
-  <%= movie.overview %>
-<% end %>
-<% @list.bookmarks.each do |bookmark|  %>
-<%= bookmark.comment %>
-<% end %>
-<%= link_to "Remove", list_path(@list), method: :delete %>
+<div class="container-movie ml-30">
+  <div class="card-movie">
+    <% @list.movies.each do |movie|  %>
+      <%= image_tag(movie.poster_url, height: 250, width: 200) %>
+      <h3><%= movie.title %></h3>
+      <p><%= movie.overview %></p>
+    <% end %>
+  </div>
+  <div class="card-bookmark">
+    <% @list.bookmarks.each do |bookmark|  %>
+      <svg class= "size-30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M96 224C84.72 224 74.05 226.3 64 229.9V224c0-35.3 28.7-64 64-64c17.67 0 32-14.33 32-32S145.7 96 128 96C57.42 96 0 153.4 0 224v96c0 53.02 42.98 96 96 96s96-42.98 96-96S149 224 96 224zM352 224c-11.28 0-21.95 2.305-32 5.879V224c0-35.3 28.7-64 64-64c17.67 0 32-14.33 32-32s-14.33-32-32-32c-70.58 0-128 57.42-128 128v96c0 53.02 42.98 96 96 96s96-42.98 96-96S405 224 352 224z"/></svg>
+      <%= bookmark.comment %>
+    <% end %>
+  </div>
+    <%= link_to list_path(@list), method: :delete do %>
+    <div class="btn center">Remove</div>
+    <% end %>
 </div>
