@@ -16,8 +16,12 @@
         <%= link_to list.name, list_path(list) %>
         </div>
       <% end %>
-      <div id="card-add-list">
-        <%= link_to "add a list", new_list_path %>
+
+        <%= link_to new_list_path do %>
+        <div class= "btn">
+          Add a list
+        </div>
+        <% end  %>
       </div>
       </div>
     </div>

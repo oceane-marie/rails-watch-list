@@ -1,10 +1,9 @@
 // Specific CSS for your home-page
 .body{
-  display: flex;
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
   color: gray;
-  position: relative;
+  background-color: rgb(251, 243, 228);
 }
 
 h1{
@@ -31,29 +30,40 @@ a {
   position: fixed;
   height: 100vh;
   color: white;
+  position: sticky;
 }
 
 #banner-text h1{
   padding-top: 100px;
   padding-left: 30px;
-  font-family: 'Limelight', cursive;
+  font-family: 'Space Mono', monospace;
   text-shadow: 5px 5px 10px gray;
 }
 
 #banner-text h2 {
   padding-top: 30px;
   padding-left: 30px;
-  font-family: 'Limelight', cursive;
+  font-family: 'Space Mono', monospace;
 }
 
 .container {
-  margin-top: 150px;
+  margin-top: 20px;
   font-size: 24px;
   font-family: 'Raleway', sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-list {
   margin-bottom: 30px;
+  width: fit-content;
+}
+
+img {
+  position: relative;
+  .card-list a {
+    position: absolute;
+  }
 }
 
 #card-add-list{

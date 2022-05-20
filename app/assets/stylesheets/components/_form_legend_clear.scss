@@ -8,3 +8,19 @@
 legend ~ div.form-check:first-of-type {
   clear: left;
 }
+
+.container{
+  text-align: center;
+}
+
+#card-name{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-family: 'Space Mono', monospace;
+  padding-top: 100px;
+  padding-bottom: 30px;
+}
